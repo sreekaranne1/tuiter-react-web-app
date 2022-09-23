@@ -12,6 +12,13 @@ body {
 .wd-title {
   padding-left: 16px;
   padding-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 565px;
+}
+.fa-lg {
+  padding-top: 16px;
+  color: rgb(29, 161, 242);
 }
 .wd-h1 {
   margin: 0px;
@@ -46,8 +53,13 @@ hr {
 
 .wd-items {
   display: flex;
+  justify-content: space-between;
+  max-width: 506px;
 }
 
+.wd-flexing {
+  display: flex;
+}
 .wd-small-d {
   font-size: 15px;
   margin: 0px;

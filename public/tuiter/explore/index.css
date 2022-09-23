@@ -31,7 +31,14 @@ body {
   color: rgb(29, 161, 242);
   margin-top: 17px;
 }
-
+.wd-flex {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 16px;
+}
+.fa-ellipsis {
+  color: rgb(110, 118, 125);
+}
 .wd-boarder-color {
   border-style: solid;
   border-color: rgb(47, 51, 54);
