@@ -60,6 +60,7 @@ body {
 #wd-selected {
   color: rgb(29, 161, 242);
   border-bottom: solid 3px rgb(29, 161, 242);
+  padding-bottom: 15px;
 }
 
 /*c items*/
