@@ -22,23 +22,23 @@ const PostSummaryList = () => {
       </div>
       <ul class="nav nav-tabs mt-1 mb-1 wd-flex">
         <li class="nav-item">
-          <a class="nav-link  active" href="#">For You</a>
+          <a class="nav-link  active" href="for-you.html">For You</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="#">Trending</a>
+          <a class="nav-link " href="trending.html">Trending</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="#">News</a>
+          <a class="nav-link " href="news.html">News</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="#" tabindex="-1"
+          <a class="nav-link " href="sports.html" tabindex="-1"
             >Sports</a
           >
         </li>
         <li class="nav-item">
           <a
             class="nav-link d-none d-sm-none d-md-block d-lg-block d-xl-block d-xxl-block "
-            href="#"
+            href="entertainment.html"
             tabindex="-1"
             ><span class="wd-high text-white">Entertainment</span></a
           >
@@ -47,12 +47,12 @@ const PostSummaryList = () => {
     
       <div class="position-relative">
         <img
-          src="../../../tuiter/starship1.png"
+          src="../starship.jpg"
           alt="StarShip"
           width="100%"
         />
         <div class="position-absolute bottom-0 left-0 ps-2">
-          <div class="text-white">Music . Last night</div>
+         
           <h2 class="text-white">SpaceX's Starship</h2>
         </div>
       </div>
