@@ -6,3 +6,17 @@
   bottom: 11px;
   left: 10px;
 }
+.wd-small-d {
+  font-size: 15px;
+  margin: 0px;
+}
+.wd-small-text {
+  margin: 0px;
+  font-size: 15px;
+}
+.wd-img {
+  padding: 0px;
+}
+.wd-backcolor{
+  background-color: black;
+}
