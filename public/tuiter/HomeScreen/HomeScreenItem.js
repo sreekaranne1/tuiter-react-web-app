@@ -29,14 +29,14 @@ const HomeScreenItem = (post) => {
                 class=""
               />
             </li>
-            <li class="list-group-item wd-backcolor">
+            ${post.content1?`<li class="list-group-item wd-backcolor">
               <div class="text-white">
                 ${post.content1}
               </div>
               <div class="text-secondary">
                 ${post.content2}
               </div>
-            </li>
+            </li>`:''}
           </ul>
           <div class="row mt-2 text-secondary">
             <div class="col">

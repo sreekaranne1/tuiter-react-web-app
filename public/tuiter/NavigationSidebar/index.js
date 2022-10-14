@@ -1,15 +1,15 @@
-const NavigationSidebar = () => {
+const NavigationSidebar = (page) => {
   return `
   <div class="list-group ">
   <a
-    href="https://en.wikipedia.org/wiki/Dune_(novel)"
+    href="tuiter.html"
     class="list-group-item list-group-item-action "
   >
     <i class="fa-brands fa-twitter fa-lg "></i>
   </a>
   <a
-    href="https://en.wikipedia.org/wiki/The_Lord_of_the_Rings"
-    class="list-group-item list-group-item-action"
+    href="../HomeScreen/index.html"
+    class="list-group-item list-group-item-action ${page=='home'?'active':''}"
     ><i class="fa-solid fa-house"></i>
     <span
       class="d-none d-xl-inline d-xxl-inline d-sm-none d-lg-none d-md-none ps-2"
@@ -17,8 +17,8 @@ const NavigationSidebar = () => {
     ></a
   >
   <a
-    href="https://en.wikipedia.org/wiki/The_Forever_War"
-    class="list-group-item list-group-item-action active"
+    href="../ExploreScreen/index.html"
+    class="list-group-item list-group-item-action ${page=='explore'?'active':''}"
     ><i class="fa-solid fa-hashtag"></i>
     <span
       class="d-none d-xl-inline d-xxl-inline d-sm-none d-lg-none d-md-none ps-2"
@@ -26,8 +26,8 @@ const NavigationSidebar = () => {
     ></a
   >
   <a
-    href="https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_(novel)"
-    class="list-group-item list-group-item-action"
+    href="notification.html"
+    class="list-group-item list-group-item-action ${page=='notifications'?'active':''}"
     ><i class="fa-regular fa-bell"></i>
     <span
       class="d-none d-xl-inline d-xxl-inline d-sm-none d-lg-none d-md-none ps-2"
@@ -35,8 +35,8 @@ const NavigationSidebar = () => {
     ></a
   >
   <a
-    href="https://en.wikipedia.org/wiki/Ender%27s_Game"
-    class="list-group-item list-group-item-action"
+    href="messages.html"
+    class="list-group-item list-group-item-action ${page=='messages'?'active':''}"
     tabindex="-1"
     aria-disabled="true"
     ><i class="fa-regular fa-envelope"></i>
@@ -46,8 +46,8 @@ const NavigationSidebar = () => {
     ></a
   >
   <a
-    href="https://en.wikipedia.org/wiki/Dune_(novel)"
-    class="list-group-item list-group-item-action"
+    href="bookmarks.html"
+    class="list-group-item list-group-item-action ${page=='bookmarks'?'active':''}"
   >
     <i class="fa-regular fa-bookmark"></i>
     <span
@@ -56,8 +56,8 @@ const NavigationSidebar = () => {
     ></a
   >
   <a
-    href="https://en.wikipedia.org/wiki/The_Lord_of_the_Rings"
-    class="list-group-item list-group-item-action"
+    href="list.html"
+    class="list-group-item list-group-item-action ${page=='lists'?'active':''}"
     ><i class="fa-regular fa-rectangle-list"></i>
     <span
       class="d-none d-xl-inline d-xxl-inline d-sm-none d-lg-none d-md-none ps-2"
@@ -65,8 +65,8 @@ const NavigationSidebar = () => {
     ></a
   >
   <a
-    href="https://en.wikipedia.org/wiki/The_Forever_War"
-    class="list-group-item list-group-item-action"
+    href="profile.html"
+    class="list-group-item list-group-item-action ${page=='profile'?'active':''}"
     ><i class="fa-regular fa-user"></i>
     <span
       class="d-none d-xl-inline d-xxl-inline d-sm-none d-lg-none d-md-none ps-2"
@@ -74,8 +74,8 @@ const NavigationSidebar = () => {
     >
   </a>
   <a
-    href="https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_(novel)"
-    class="list-group-item list-group-item-action"
+    href="more.html"
+    class="list-group-item list-group-item-action ${page=='more'?'active':''}"
   >
     <span class="fa-stack wd-sizing">
       <i class="fa-regular fa-circle fa-stack-2x"></i>
@@ -93,5 +93,7 @@ const NavigationSidebar = () => {
   Tuit
 </button>
   `;
+
+  
 };
 export default NavigationSidebar;

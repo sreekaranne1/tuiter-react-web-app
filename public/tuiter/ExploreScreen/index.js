@@ -1,12 +1,12 @@
 import NavigationSidebar from "../NavigationSidebar/index.js";
 import WhoToFollowList from "../WhoToFollowList/index.js";
-import ExploreComponent from "../ExploreScreen/ExploreComponent.js";
+import ExploreComponent from "./ExploreComponent.js";
 function exploreComponent() {
   $("#wd-explore").append(`
    <div class="row mt-2">
     <div class="col-2 col-md-2 col-lg-1 col-xl-2 ">
     <!--<h3>Navigation Sidebar</h3>-->
-   ${NavigationSidebar()}
+   ${NavigationSidebar("bookmarks")}
     </div>
     <div class="col-10 col-lg-7 col-xl-6">
      <!--<h3>ExploreComponent</h3>-->
@@ -18,5 +18,6 @@ function exploreComponent() {
     </div>
    </div>
     `);
+    $(`.${page}`).addClass('active');
 }
 $(exploreComponent);
