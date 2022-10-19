@@ -15,6 +15,7 @@ function HomeCompanentItem({ post }) {
         <div className="col-1">
           <img
             src={post.image}
+            alt="hello"
             className="rounded-circle"
             height="48px"
             width="48px"
@@ -51,6 +52,7 @@ function HomeCompanentItem({ post }) {
                           <div className="col-12">
                             <img
                               src={post.imageRe}
+                              alt="hello"
                               className="rounded-circle inline"
                               height="18px"
                               width="18px"
