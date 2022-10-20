@@ -3,6 +3,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
+import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
+
 const NavigationSidebar = () => {
   const { pathname } = useLocation();
   const paths = pathname.split("/");
@@ -10,9 +14,9 @@ const NavigationSidebar = () => {
   return (
     <div>
       <div className="list-group">
-        <a className="list-group-item" href="tuiter.html">
+        <Link className="list-group-item" to="tuiter">
           <i class="bi bi-twitter"></i>
-        </a>
+        </Link>
         <Link
           to="/tuiter/home"
           className={`list-group-item
@@ -40,7 +44,7 @@ const NavigationSidebar = () => {
           </span>
         </Link>
         <Link
-          to="notification.html"
+          to="notifications"
           className={`list-group-item
                     ${active === "notifications" ? "active" : ""}`}
         >
@@ -50,7 +54,7 @@ const NavigationSidebar = () => {
           </span>
         </Link>
         <Link
-          to="messages.html"
+          to="messages"
           className={`list-group-item
                     ${active === "messages" ? "active" : ""}`}
         >
@@ -60,7 +64,7 @@ const NavigationSidebar = () => {
           </span>
         </Link>
         <Link
-          to="bookmarks.html"
+          to="bookmarks"
           className={`list-group-item
                     ${active === "bookmarks" ? "active" : ""}`}
         >
@@ -70,7 +74,7 @@ const NavigationSidebar = () => {
           </span>
         </Link>
         <Link
-          to="list.html"
+          to="list"
           className={`list-group-item
                     ${active === "lists" ? "active" : ""}`}
         >
@@ -80,7 +84,7 @@ const NavigationSidebar = () => {
           </span>
         </Link>
         <Link
-          to="profile.html"
+          to="profile"
           className={`list-group-item
                     ${active === "profile" ? "active" : ""}`}
         >
@@ -90,11 +94,30 @@ const NavigationSidebar = () => {
           </span>
         </Link>
         <Link
-          to="more.html"
+          to="more"
           className={`list-group-item
                     ${active === "more" ? "active" : ""}`}
         >
-          <i class="bi bi-circle-fill"></i>
+          <span style={{ display: "inline-block", position: "relative" }}>
+            <FontAwesomeIcon
+              icon={faCircle}
+              textAnchor="middle"
+              alignmentBaseline="middle"
+            />
+            <FontAwesomeIcon
+              icon={faEllipsis}
+              textAnchor="middle"
+              alignmentBaseline="middle"
+              style={{
+                fontSize: ".5em",
+                position: "absolute",
+                left: ".55em",
+                bottom: "1em",
+              }}
+              className="text-white"
+            />
+          </span>
+
           <span class="d-none d-xl-inline d-xxl-inline d-sm-none d-lg-none d-md-none ps-2">
             More
           </span>
