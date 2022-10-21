@@ -10,7 +10,7 @@ import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
 const NavigationSidebar = () => {
   const { pathname } = useLocation();
   const paths = pathname.split("/");
-  const active = paths[2] ? paths[2] : "explore";
+  const active = paths[2];
   return (
     <div>
       <div className="list-group">
