@@ -17,6 +17,7 @@ function Tuiter() {
       >
         <Routes>
           <Route index element={<Navigate to="/tuiter/explore" />} />
+          <Route path="/" element={<Navigate to="/tuiter/explore" />} />
           <Route path="home" element={<HomeComponentList />} />
           <Route path="explore" element={<ExploreComponent />} />
         </Routes>
