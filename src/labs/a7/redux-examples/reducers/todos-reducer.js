@@ -8,29 +8,29 @@ const initialTodos = [
   {
     _id: "234",
     do: "Reduce space transportation costs to become a spacefaring civilization",
-    done: true,
+    done: false,
   },
 ];
 
-const todosSlice = createSlice({
+export const todosSlice = createSlice({
   name: "todos",
   initialState: initialTodos,
   reducers: {
-    addTodo(state, action) {
+    addTodo: (state, action) => {
       state.push({
         _id: new Date().getTime(),
         do: action.payload.do,
         done: false,
       });
     },
-    deleteTodo(state, action) {
+    deleteTodo: (state, action) => {
       const index = action.payload;
       state.splice(index, 1);
     },
-    todoDoneToggle(state, action) {
-      console.log(state);
-      console.log(action);
-      const todo = state.find((todo) => todo._id === action.payload);
+    todoDoneToggle: (state, action) => {
+      const todo = state.find((todo, index) => {
+        return index === action.payload;
+      });
       todo.done = !todo.done;
     },
   },
