@@ -12,7 +12,7 @@ const profileSlice = createSlice({
     website: "youtube.com/webdevtv",
     location: "Hyderabad, TS",
     dateOfBirth: "June 10, 2000",
-    dateJoined: "5/2009",
+    dateJoined: "May 2009",
     followingCount: 340,
     followersCount: 223,
   },
