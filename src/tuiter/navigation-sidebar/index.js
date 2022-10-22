@@ -10,7 +10,7 @@ import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
 const NavigationSidebar = () => {
   const { pathname } = useLocation();
   const paths = pathname.split("/");
-  const active = paths[2];
+  const active = paths[2] ? paths[2] : "home";
   return (
     <div>
       <div className="list-group">
@@ -18,7 +18,7 @@ const NavigationSidebar = () => {
           <i class="bi bi-twitter"></i>
         </Link>
         <Link
-          to="/tuiter/home"
+          to="/tuiter"
           className={`list-group-item
                     ${active === "home" ? "active" : ""}`}
         >

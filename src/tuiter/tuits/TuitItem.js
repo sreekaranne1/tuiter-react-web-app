@@ -1,17 +1,18 @@
 import React from "react";
 import "./index.css";
+import TuitStats from "./TuitStats";
+import { useDispatch } from "react-redux";
+import { deleteTuit } from "./tuits-reducer";
 
-function HomeCompanentItem({ post }) {
-  console.log(post.userName);
+function TuitItem({ post }) {
+  const dispatch = useDispatch();
+  const deleteTuitHandler = (id) => {
+    dispatch(deleteTuit(id));
+  };
+
   return (
     <li className="list-group-item wd-backcolor">
       <div className="row">
-        {post.retweeted && (
-          <div className="ms-4 text-secondary">
-            <i class="bi bi-recycle"></i>{" "}
-            <span className="ms-3 fs-6">{post.retweeted}</span>
-          </div>
-        )}
         <div className="col-1">
           <img
             src={post.image}
@@ -27,9 +28,12 @@ function HomeCompanentItem({ post }) {
               <span className="fw-bolder">{post.userName}</span>{" "}
               <i className="bi bi-check-circle-fill text-primary"></i>{" "}
               <span className="text-secondary fs-6">
-                @{post.handle} . {post.time}
+                {post.handle} . {post.time}
               </span>
-              <i class="bi bi-three-dots wd-grey float-end"></i>
+              <i
+                className="bi bi-x-lg float-end"
+                onClick={() => deleteTuitHandler(post._id)}
+              ></i>
             </div>
             <div className="mb-3">{post.tuit}</div>
             <ul className="list-group rounded">
@@ -71,26 +75,12 @@ function HomeCompanentItem({ post }) {
                 </li>
               )}
             </ul>
-            <div className="row mt-2 text-secondary">
-              <div className="col">
-                <i class="bi bi-chat"></i>{" "}
-                <span className="">{post.comments}</span>
-              </div>
-              <div className="col">
-                <i class="bi bi-recycle"></i>{" "}
-                <span className="">{post.retweets}</span>
-              </div>
-              <div className="col">
-                <i className="bi bi-heart"></i>{" "}
-                <span className="wd-content">{post.likes}</span>
-              </div>
-              <div className="col">
-                <i class="bi bi-upload"></i>
-              </div>
-            </div>
-            {post.showthisthread && (
-              <div className="text-primary mt-3">Show this thread</div>
-            )}
+            <TuitStats
+              liked={post.liked}
+              comments={post.replies}
+              retweets={post.retuits}
+              likes={post.likes}
+            />
           </div>
         </div>
       </div>
@@ -98,4 +88,4 @@ function HomeCompanentItem({ post }) {
   );
 }
 
-export default HomeCompanentItem;
+export default TuitItem;
