@@ -2,12 +2,12 @@ import React from "react";
 import "./index.css";
 import TuitStats from "./TuitStats";
 import { useDispatch } from "react-redux";
-import { deleteTuit } from "./tuits-reducer";
+import { deleteTuitThunk } from "../../services/tuits-thunks";
 
 function TuitItem({ post }) {
   const dispatch = useDispatch();
   const deleteTuitHandler = (id) => {
-    dispatch(deleteTuit(id));
+    dispatch(deleteTuitThunk(id));
   };
 
   return (
@@ -15,7 +15,7 @@ function TuitItem({ post }) {
       <div className="row">
         <div className="col-1">
           <img
-            src={post.image}
+            src={`images/${post.image}`}
             alt="hello"
             className="rounded-circle"
             height="48px"
@@ -76,6 +76,7 @@ function TuitItem({ post }) {
               )}
             </ul>
             <TuitStats
+              post={post}
               liked={post.liked}
               comments={post.replies}
               retweets={post.retuits}
