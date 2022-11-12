@@ -20,7 +20,6 @@ function TuitStats({ comments, retweets, likes, liked, post }) {
       })
     );
   };
-  const like = liked ? "text-danger" : "";
   return (
     <div className="row mt-2 text-secondary">
       <div className="col">
