@@ -1,25 +1,26 @@
 import React from "react";
 
 function PostSummaryItem({ post }) {
+  console.log(post);
   return (
-    <li class="list-group-item">
-      <div class="row">
-        <div class="col-9">
-          <div class="text-secondary">{post.topic}</div>
-          <div class="fw-bolder ">
-            {post.userName}{" "}
+    <li className="list-group-item">
+      <div className="row">
+        <div className="col-9">
+          <div className="text-secondary">{post.topic}</div>
+          <div className="fw-bolder ">
+            {post.username}{" "}
             <span>
-              <i class="bi bi-check-circle-fill text-primary"></i>
+              <i className="bi bi-check-circle-fill text-primary"></i>
             </span>
-            <span class="text-secondary"> - {post.time}</span>
+            <span className="text-secondary"> - {post.time}</span>
           </div>
-          <div class="text-secondary">{post.title}</div>
+          <div className="text-secondary">{post.title}</div>
         </div>
-        <div class="col-3">
+        <div className="col-3">
           <img
-            src={post.image}
-            alt=""
-            class="float-end rounded"
+            src={`images/${post.image}`}
+            alt="hello"
+            className="float-end rounded"
             height="100px"
           />
         </div>
