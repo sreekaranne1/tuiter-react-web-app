@@ -8,6 +8,15 @@ const WhatsHappening = () => {
   const tuitClickHandler = () => {
     const newTuit = {
       tuit: whatsHappening,
+      image: "tesla.jpeg",
+      username: "Tesla",
+      topic: "Automobile",
+      handle: "@tesla",
+      title: "This tuit is created by you, see the content in home screen",
+      dislikes: 0,
+      time: "now",
+      replies: 0,
+      retuits: 0,
     };
     dispatch(createTuitThunk(newTuit));
   };

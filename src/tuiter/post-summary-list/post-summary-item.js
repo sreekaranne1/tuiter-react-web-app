@@ -1,7 +1,6 @@
 import React from "react";
 
 function PostSummaryItem({ post }) {
-  console.log(post);
   return (
     <li className="list-group-item">
       <div className="row">
@@ -18,7 +17,7 @@ function PostSummaryItem({ post }) {
         </div>
         <div className="col-3">
           <img
-            src={`images/${post.image}`}
+            src={`/images/${post.image}`}
             alt="hello"
             className="float-end rounded"
             height="100px"

@@ -9,13 +9,12 @@ function TuitItem({ post }) {
   const deleteTuitHandler = (id) => {
     dispatch(deleteTuitThunk(id));
   };
-
   return (
     <li className="list-group-item wd-backcolor">
       <div className="row">
         <div className="col-1">
           <img
-            src={`images/${post.image}`}
+            src={`/images/${post.image}`}
             alt="hello"
             className="rounded-circle"
             height="48px"
@@ -25,7 +24,7 @@ function TuitItem({ post }) {
         <div className="col-11">
           <div className="ms-2  fs-6">
             <div>
-              <span className="fw-bolder">{post.userName}</span>{" "}
+              <span className="fw-bolder">{post.username}</span>{" "}
               <i className="bi bi-check-circle-fill text-primary"></i>{" "}
               <span className="text-secondary fs-6">
                 {post.handle} . {post.time}
